@@ -1,0 +1,25 @@
+title: "Node-Based Interface Design"
+description: Guidelines for designing good node-based interfaces
+# Build settings
+sass:
+  style: compressed
+markdown: kramdown
+kramdown:
+  auto_ids: "true"
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: python
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+# collections_dir: _collections
+# collections:
+#   case-studies:
+#     output: true
+#     permalink: /case-studies
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
