@@ -1,0 +1,20 @@
+<nav class="nav">
+  <div>
+    <a href="{{ base }}" class="nav-title">
+      <h1>Designing <br />Node-Based <br />Interfaces</h1>
+    </a>
+    <ol>
+      {% for sections in site.sections %}
+      <li>
+        <a href="{{ base }}{{ sections.url }}">{{ sections.title }}</a>
+      </li>
+      {% endfor %}
+      <li class="nav-category">Case Studies</li>
+      {% for casestudies in site.casestudies %}
+      <li>
+        <a class="nav-casestudy-link" href="{{ base }}{{ casestudies.url }}">↳{{ casestudies.title }}</a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>

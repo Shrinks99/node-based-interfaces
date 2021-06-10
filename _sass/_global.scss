@@ -1,0 +1,127 @@
+// Apply a natural box layout model to all elements, but allowing components to change
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+}
+
+// Global settings
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  // It's bad to set this in pixels becuase that overrides users who change their default sizing, font-size is instead set to a relative percentage of all browser's default size of 16px
+  font-size: 100%;
+}
+
+// Colors
+
+$hwblue: #2B5DB7;
+$darkgrey: #3b4049;
+
+// _mq.scss media query settings
+
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px
+);
+
+// Page content wrapper, applies to everything below the nav and above the footer!
+
+.wrapper {
+  min-height: 80vh;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+// Standard layout elements
+
+.stdsection {
+  display: flex;
+  justify-content: center;
+}
+
+.section-container {
+  padding: 0px 20px 0 20px;
+  max-width: 1340px;
+  width: 100%;
+}
+
+.main-section-grid {
+  padding: 0;
+  margin-top: 4.6rem;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+}
+
+// Typography
+
+//Apply this class to specific text that you want to break in specific places when the page is resized
+.word-wrap-section {
+  display: block;
+}
+
+.center-text {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h1 {
+  font-size: max(min(4.5vw, 4.4rem), 3.4rem);
+  font-variation-settings: 'wght' 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-subheader {
+  font-size: max(min(2vw, 1.7rem), 1.5rem);
+  font-variation-settings: 'wght' 550;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+.h2 {
+  margin-top: 0;
+  font-size: 2.625rem;
+  font-variation-settings: 'wght' 700;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.h3 {
+  font-size: 1.875rem;
+  font-variation-settings: 'wght' 700;
+  margin-top: 0;
+}
+
+.h4 {
+  font-size: 1.25rem;
+  font-variation-settings: 'wght' 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.p-body {
+  font-size: 1.125rem;
+  font-variation-settings: 'wght' 450;
+  line-height: 1.5rem;
+}
+
+.p-small {
+  font-size: 1rem;
+  font-variation-settings: 'wght' 450;
+  line-height: 1.4rem;
+}
+

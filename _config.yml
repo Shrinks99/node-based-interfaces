@@ -15,11 +15,13 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
-# collections_dir: _collections
-# collections:
-#   case-studies:
-#     output: true
-#     permalink: /case-studies
+collections_dir: _collections
+collections:
+  casestudies:
+    output: true
+    # permalink: /case-studies
+  sections:
+    output: true
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

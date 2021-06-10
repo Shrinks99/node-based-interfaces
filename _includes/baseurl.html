@@ -1,0 +1,13 @@
+<!-- Makes URLs truly relative to their root directory. This is used instead of Jekyll's default 'baseurl' feature because it is more robust. Add more rules here if you need to!-->
+{% assign base = '' %}
+{% assign depth = page.url | split: '/' | size | minus: 1
+%}{% if depth <= 0
+%}{% assign base = '.'
+%}{% elsif depth == 1
+%}{% assign base = '..'
+%}{% elsif depth == 2
+%}{% assign base = '../..'
+%}{% elsif depth == 3
+%}{% assign base = '../../..'
+%}{% endif
+%}

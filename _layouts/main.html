@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include baseurl.html %}
+  {% include head.html %}
+  <body class="wrapper">
+    <div class="stdsection">
+      <div class="section-container main-section-grid">
+        <aside class="nav-container">
+          {% include nav.html %}
+        </aside>
+        <div class="body-container">
+          <section class="bodycontent">
+            {{ content }}
+          </section>
+          <div class="next-link-container">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
