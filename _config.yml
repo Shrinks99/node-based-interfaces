@@ -22,6 +22,7 @@ collections:
     # permalink: /case-studies
   sections:
     output: true
+    # permalink: /sections
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

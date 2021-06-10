@@ -4,10 +4,10 @@
 %}{% if depth <= 0
 %}{% assign base = ''
 %}{% elsif depth == 1
-%}{% assign base = '.'
-%}{% elsif depth == 2
 %}{% assign base = '..'
-%}{% elsif depth == 3
+%}{% elsif depth == 2
 %}{% assign base = '../'
+%}{% elsif depth == 3
+%}{% assign base = '../../'
 %}{% endif
 %}
