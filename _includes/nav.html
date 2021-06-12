@@ -6,7 +6,7 @@
     <ol>
       {% for sections in site.sections %}
       <li>
-        <a href="{{ base }}{{ sections.url }}">{{ sections.title }}</a>
+        <a href="{{ site.baseurl }}{{ sections.url }}">{{ sections.title }}</a>
       </li>
       {% endfor %}
       <li class="nav-category">Case Studies</li>
