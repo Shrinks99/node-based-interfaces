@@ -5,15 +5,24 @@
     </a>
     <ol>
       {% for sections in site.sections %}
+      {% if page.url == sections.url %}
+      <li>
+        <a class="nav-link-selected" href="{{ site.baseurl }}{{ sections.url }}">{{ sections.title }}</a>
+      </li>
+      {% endif %}
+      {% if page.url != sections.url %}
       <li>
         <a href="{{ site.baseurl }}{{ sections.url }}">{{ sections.title }}</a>
       </li>
+      {% endif %}
       {% endfor %}
       <li class="nav-category">Case Studies</li>
       {% for casestudies in site.casestudies %}
+      {% if page.url == casestudies.url %}
       <li>
-        <a class="nav-casestudy-link" href="{{ base }}{{ casestudies.url }}">↳{{ casestudies.title }}</a>
+        <a class="nav-casestudy-link" href="{{ site.baseurl }}{{ casestudies.url }}">↳{{ casestudies.title }}</a>
       </li>
+      {% endif %}
       {% endfor %}
     </ol>
   </div>
