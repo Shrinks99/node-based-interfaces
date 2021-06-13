@@ -17,7 +17,6 @@
   ol {
     padding-left: 0;
     list-style: none;
-
   }
 
   li {
@@ -43,15 +42,18 @@
   color: $darkgrey;
 }
 
-.nav-link-selected::before {
+.nav-link-indicator {
   display: block;
-  content: "";
   position: relative;
   background-color: $hwblue;
   width: 0.188rem;
   height: 1rem;
-  top: 1.15rem;
   right: 0.5rem;
+  top: 0.1rem;
+}
+
+.nav-list-selected {
+  display: flex;
 }
 
 .nav-link-selected {
