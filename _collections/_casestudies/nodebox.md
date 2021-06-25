@@ -12,27 +12,27 @@ Nodebox is an open source vector graphics program that (as the name might sugges
 
 ### Anatomy of a Nodebox Node
 
-![Nodebox's rect and elipse nodes](../img/casestudies/nodebox/Nodebox-node.png)
+![Nodebox's rect and elipse nodes](../img/casestudies/nodebox/nodebox-node.png)
 
 Each node in Nodebox is set to the same fixed size, contains an identifying icon, and a unique identifying name that can be changed by the user.  Nodebox's nodes have colour-coded input sockets referred to as "ports" which are located on the top edge of each node. A single output port is located in the bottom left corner.  When these tooltips are hovered over the name of the corresponding parameter in the properties panel is conveyed to the user with a tooltip.  Each node is assigned a colour based on the data type that it outputs.  Each node has an icon and a unique identifier.  The white triangle along the bottom right side denotes which node in the graph is currently being displayed in the viewer pane.
 
 ### Nodebox's Node-graph
 
-![A typical graph in Nodebox](../img/casestudies/nodebox/Nodebox-graph.png)
+![A typical graph in Nodebox](../img/casestudies/nodebox/nodebox-graph.png)
 
 While Nodebox's graph is not laid out automatically, it also contains no pipe elbows to allow users to change the direction and placement of pipes in the graph.  Because pipes are laid out by the program automatically, the only way to change the organization of the graph is to move the nodes around, usually by spacing them out.  Nodebox also does not contain any type of backdrop for organizing nodes within the graph.
 
-![Nodebox's properties panel](../img/casestudies/nodebox/Nodebox-properties.png)
+![Nodebox's properties panel](../img/casestudies/nodebox/nodebox-properties.png)
 
 Nodebox's properties panel allows users to manage a node's controls and add custom property values.  Each item in a node's properties is always exposed as a socket on the top of each node in the graph.
 
 #### Grouping and Complex Graphs
 
-![Groups in Nodebox](../img/casestudies/nodebox/Nodebox-groups.png)
+![Groups in Nodebox](../img/casestudies/nodebox/nodebox-groups.png)
 
 Nodebox does contain the usual system of grouping nodes that is present in other software packages.  Multiple nodes can be selected in the graph and grouped into what Nodebox refers to as a "network" through the right click menu.  Custom input sockets can be created and passed through to the nodes within the network.  Parameters can be set in a similar way, allowing users to create custom tools similar to other software packages.
 
-![A complex network in Nodebox](../img/casestudies/nodebox/Nodebox-complex.png)
+![A complex network in Nodebox](../img/casestudies/nodebox/nodebox-complex.png)
 
 This image is an example of a more complex graph made in Nodebox, it highlights some of the organizational difficulties posed by the program's automatic pipe layout algorithm.  Note that pipes in Nodebox are also rendered overtop the nodes.
 
