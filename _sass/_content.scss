@@ -43,7 +43,13 @@
   }
 
   h3 {
+    margin-top: 0;
     font-size: 1.5rem;
+  }
+
+  h4 {
+    margin-top: 0;
+    font-size: 1.25rem;
   }
 
   h5 {
@@ -85,7 +91,11 @@
     }
   }
 
-  li::marker {
-    margin-right: 0.5rem;
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: $lightergrey;
+    border-radius: 0.125rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
 }

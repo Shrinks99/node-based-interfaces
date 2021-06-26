@@ -1,3 +1,10 @@
+// Colors
+
+$hwblue: #2B5DB7;
+$darkgrey: #3b4049;
+$lightgrey: #7e7e7e;
+$lightergrey: #e5e5e5;
+
 // Apply a natural box layout model to all elements, but allowing components to change
 
 html {
@@ -9,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #e5e5e5;
+  background-color: $lightergrey;
 }
 
 // Global settings
@@ -19,12 +26,6 @@ body {
   // It's bad to set this in pixels becuase that overrides users who change their default sizing, font-size is instead set to a relative percentage of all browser's default size of 16px
   font-size: 100%;
 }
-
-// Colors
-
-$hwblue: #2B5DB7;
-$darkgrey: #3b4049;
-$lightgrey: #7e7e7e;
 
 // _mq.scss media query settings
 
