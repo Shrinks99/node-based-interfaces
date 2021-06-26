@@ -12,7 +12,7 @@ If you're using nodes we can reasonably assume that users have reason to manipul
 
 If users are constantly using many different data types to perform operations you may be forced to represent them as multi-in-multi-out nodes.  These nodes usually display their connections with sockets that denote the data type being passed between them, when data types correspond those nodes can be connected to each-other through those sockets.  As of version 2.92, [Blender's nodes can deal with 11 different colour coded data types](https://docs.blender.org/manual/en/2.92/interface/controls/nodes/parts.html#sockets), therefore Blender has chosen a multi-in-multi-out node system to allow nodes to deal with many different data types without forcing the user to constantly use dropdown menus or other methods after connecting a node to determine what values should be operated upon.
 
-The issue with multi-in-multi-out nodes is that they are typically harder for users to arrange and it is more difficult to create a clear node graph because there is a greater chance of pipes crossing.  Multi-in-single-out nodes—while advantageous for node-graph organization and showcasing data flow— can also slow users if they constantly need to select data types in order to control nodes effectively.
+The issue with multi-in-multi-out nodes is that they are typically harder for users to arrange and it is more difficult to create a clear node graph because there is a greater chance of pipes crossing.  Multi-in-single-out nodes — while advantageous for node-graph organization and showcasing data flow — can also slow users if they constantly need to select data types in order to control nodes effectively.
 
 If you can assume a single data type that users will be operating on most of the time _use multi-in-single-out nodes!_  If this would result in constantly selecting many different data types post-connection _use multi-in-multi-out nodes!_
 
@@ -36,7 +36,9 @@ Pay attention to the sizes at which information is visible, focus on your typese
 
 ### Displaying controls on nodes in multi-in-multi-out systems
 
-Displaying properties controls on the node in place of just a label can reduce the friction between hooking up nodes and finding the applicable property in a system with so many different inputs.  Be warned that as your properties editing UI becomes more complex and fully featured, the sizes of your nodes in the graph will become less uniform which will likely result in another organizational hurdle for users.
+![An example multi-in-single-out node graph with three nodes simply connected in sequence.](../img/controls-on-nodes.svg)
+
+Displaying controls on nodes instead just a label _can_ reduce the friction between hooking up nodes and finding the applicable property when there are many different inputs.  Be warned that as your property editor interfaces become more complex, the sizes of your nodes in the graph will become less uniform, which will likely present another organizational hurdle for users.
 
 ### Store graph data as plaintext!
 
