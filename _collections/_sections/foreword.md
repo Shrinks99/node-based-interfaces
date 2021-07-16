@@ -1,10 +1,10 @@
 ---
-  title: Foreward
+  title: Foreword
   layout: main
   collection: sections
 ---
 
-## Foreward
+## Foreword
 
 Over the course of my first internship at a VFX studio I had to learn Nuke in order to actually work with anybody, up until that point the only image compositing software I had used was Photoshop and After Effects.  I spent a whole summer completely changing the way I thought about manipulating image data and I haven't looked back.  Nodes allow users to work in two dimensions where they might otherwise have just one and if it hasn't already been made clear I'm a proponent of their intrinsic non-destructive workflow.
 

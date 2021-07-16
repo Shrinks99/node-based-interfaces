@@ -16,7 +16,7 @@ The issue with multi-in-multi-out nodes is that they are typically harder for us
 
 If you can assume a single data type that users will be operating on most of the time _use multi-in-single-out nodes!_  If this would result in constantly selecting many different data types post-connection _use multi-in-multi-out nodes!_
 
-### Node-Graph Iteraction
+### Node-Graph Interaction
 
 Chances are if you're making a piece of node-based software your users will be adding, connecting, and removing nodes from the graph _a lot_.  Most node-based software implements a text-based search system where advanced users can hit a hotkey and start typing to search for the node or function they want to add or complete.  This is _great_ and allows users to rapidly add nodes to the graph.  New users may prefer to look through an organized menu of nodes based on their category, this is also valuable as command based search systems aren't always ideal for discovery—consider implementing both options.
 
