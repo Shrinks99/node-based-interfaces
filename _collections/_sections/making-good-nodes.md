@@ -24,6 +24,14 @@ How fast can I create, connect disconnect, and delete nodes from my application'
 
 Don't let interacting with the node graph be the bottleneck of operations per minute that an advanced user can achieve within your software!
 
+### Sockets VS Pre-Extended Pipes
+
+Some node-based programs use sockets to determine, others simply point their pipes into the node and display unconnected inputs as pipes instead of as sockets.  If your program uses multi-in, multi-out nodes you will likely be connecting pipes to different operators, this requires a socketed system to ensure that users are able to visually determine where the data they want to connect will go.
+
+If your program uses multi-in, single-out nodes that pass along all data through the pipe it may be advantageous to avoid sockets all-together.  Sockets are typically quite small and have less clickable area than pre-extended pipes, pre-extended pipes with labels can make the experience of connecting nodes together quicker due to their larger clickable area.
+
+Both sockets and pre-extended pipes can run into similar issues when complex nodes demand many inputs, especially in a multi-in, single-out system where the size of nodes is typically more uniform both vertically and horizontally.
+
 ### Displaying data on nodes
 
 While node-graphs contain an infinite (or at least _very_ large) amount of space, a user's screen does not have an infinite amount of resolution.  This means that there will be a scale that most users will find to be the most comfortable when working with nodes in your application.  At this scale it should be clear what each node does—displayed by colour, shape, or otherwise—and probably what each node is named.  Some node based applications may display other indicators on the node such as using coloured outline to denote their stage of processing, or a badge to display types of data flowing through the node.
@@ -38,7 +46,7 @@ Pay attention to the sizes at which information is visible, focus on your typese
 
 ![An example multi-in-single-out node graph with three nodes simply connected in sequence.](../img/controls-on-nodes.svg)
 
-Displaying controls on nodes instead just a label _can_ reduce the friction between hooking up nodes and finding the applicable property when there are many different inputs.  Be warned that as your property editor interfaces become more complex, the sizes of your nodes in the graph will become less uniform, which will likely present another organizational hurdle for users.
+Displaying controls on nodes instead just a label _can_ reduce the friction between hooking up nodes and editing properties, especially when there are many different inputs.  Be warned that as your property editor interfaces become larger and more complex, the sizes of your nodes in the graph will become less uniform, which will likely present another organizational hurdle for users.
 
 ### Store graph data as plaintext!
 
@@ -47,7 +55,6 @@ Node-graphs allow users to create complex effects that can be applied to any inp
 1. Sharing project data! <br/> <br/> Plaintext data storage means that node-graph data can easily be copied and shared outside of the application, no need to save a new project file and import it every time you want to copy one node from another project (of course this should still be a way to import graphs). With plain text data storage users can easily share their projects — or parts of them — to the web or with other colleagues.  Moving data around inside your application is great, moving it around outside of your application with plaintext means that is easier for users to build their own tools and use your application as a platform instead of creating all graphs on a per-project-file basis.
 
 2. Debugging! <br/> <br/> People aren't perfect, software isn't perfect, bugs are going to happen!  Saving project files as plaintext allows users to open the project in a text editor and begin the process of sorting out what node is breaking their project file.  Coupled with good logs this process shouldn't be terribly difficult for people to do!  Some node-based software has its own syntax for defining text-based file structure, others just use XML.  Whatever your application ends up using it shouldn't be terribly difficult to create a syntax that is relatively quick to parse as all node-graphs are just made up of smaller component parts and act with a hierarchy.
-
 
 ### Consider graph organization
 
