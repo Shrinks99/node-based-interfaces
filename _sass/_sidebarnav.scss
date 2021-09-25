@@ -28,6 +28,10 @@
   .sidebarnav {
     grid-row-start: 2;
     margin-bottom: 4rem;
+    background-color: white;
+    border-radius: $borderradius;
+    box-shadow: $elementshadow;
+    padding: 1rem;
   }
 }
 
