@@ -62,7 +62,7 @@
 
   h5 {
     margin-top: -1.5rem;
-    color: $hwlightgrey;
+    color: lighten($hwgrey, 35);
     font-size: 1.5rem;
   }
 
@@ -102,7 +102,7 @@
 
   code {
     font-family: 'IBM Plex Mono', monospace;
-    background-color: $lightergrey;
+    background-color: $hwlightgrey;
     border-radius: 0.125rem;
     padding-left: 0.2rem;
     padding-right: 0.2rem;

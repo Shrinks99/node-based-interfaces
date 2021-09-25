@@ -8,7 +8,7 @@
 
 ##### Multi In, Multi Out
 
-Maya is a 3D DCC that serves a similar generalized use case comparable to Blender.  While Maya actually uses node-graphs for multiple different parts of the software this case study will focus on the Hypershade editor.  Each node in this editor represents an action that manipulates or creates shader material information that will be applied to a 3D object or volume.
+Maya is a 3D DCC that serves a similar generalized use case comparable to Blender.  While Maya actually uses node-graphs for multiple different parts of the software this case study will focus on the Hypershade editor which showcases Maya's primary node-based interface.  Each node in this editor represents an action that manipulates or creates shader material information that will be applied to a 3D object or volume.
 
 ### Anatomy of Maya's Hypershade Nodes
 
