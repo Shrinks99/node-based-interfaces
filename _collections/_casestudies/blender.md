@@ -30,12 +30,14 @@ Blender's nodes are user resizable in the graphs X axis but are a fixed size in 
 
 ![A typical node-graph in Blender](../img/casestudies/blender/blender-node-graph.png)
 
-As suggested by the shape of its nodes, graphs created in Blender typically flow from left to right.  Like Nuke, nodes can be muted in Blender to disable their function without removing them from the graph.  Muted nodes display any relevant connections that are passed through them with a red line.
+As suggested by the shape of its nodes, graphs created in Blender typically flow from left to right.  Like Nuke, nodes can be muted in Blender to disable their function without removing them from the graph.  Muted nodes helpfully display any relevant connections that are passed through them with a red line.
 
 ![Frames and reroute nodes in Blender](../img/casestudies/blender/blender-frame-reroute.png)
 
-Blender allows its users to create frames to visually organize a set of nodes.  Unlike Nuke, when selected the frame does not allow users to move all the nodes located within it.  Blender also includes a reroute node which can be placed in-between any pipe by holding shift, and dragging with right click to "cut" a pipe.  This implementation of node-elbows is helpfully coloured with the same data type colour as its inputs.  Left clicking and dragging on reroute nodes will extend new pipes out from them and unlike other nodes it can only be moved with the middle mouse button.
+Blender allows its users to create frames to visually organize a set of nodes.  Unlike Nuke, when selected the frame does not allow users to move all the nodes located within it.  Blender also includes a "reroute" node which can be placed in-between any pipe by holding shift, and dragging with right click to "cut" a pipe.  This implementation of node-elbows is helpfully coloured with the same data type colour as its inputs.  Left clicking and dragging on reroute nodes will extend new pipes out from them and unlike other nodes it can only be moved with the middle mouse button.
 
 ### Other Points of Interest
 
-As of Blender 2.92 node-graphs cannot be copied to plain-text.  When people share their node-graphs online it is common to post a screenshot of the node-graph where users will re-create the graph manually in order to achieve the desired effect.
+As of Blender 2.92 node-graphs cannot be copied to plain-text.  The intended workflow is to save materials in a .blend file and [append or link](https://docs.blender.org/manual/en/latest/files/linked_libraries/link_append.html) (import or reference) the relevant materials from that .blend to the current one so they can be used there.
+
+In practice, when people share their node-graphs online it is common to post a screenshot of the node-graph where users will re-create the graph manually in order to achieve the desired effect.  This is a terrible workflow and results in lots of human effort where none should be required.
