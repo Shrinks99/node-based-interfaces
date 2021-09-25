@@ -1,36 +1,210 @@
-<nav class="nav">
-  <div style="position:fixed;">
-    <a href="{{ base }}" class="nav-title">
-      <h1>Designing <br />Node-Based <br />Interfaces</h1>
-    </a>
-    <ol>
-      {% for sections in site.sections %}
-      {% if page.url == sections.url %}
-      <li class="nav-list-selected">
-        <div class="nav-link-indicator"></div>
-        <a class="nav-link-selected" href="{{ site.baseurl }}{{ sections.url }}">{{ sections.title }}</a>
-      </li>
-      {% endif %}
-      {% if page.url != sections.url %}
+<nav class="nav" aria-label="main">
+  <div class="nav-container">
+    <div class="nav-logobox">
+      <a title="Home" class="nav-logo-link" href="https://wilkinson.graphics/">
+        <!-- <object type="image/svg+xml" data="{{"/img/menubar-logo-anim.svg" | prepend: site.baseurl }}" class="nav-logo"></object> -->
+        <svg xmlns="http://www.w3.org/2000/svg" id="Wilkinson_Logo" class="nav-logo" viewBox="0 0 61.7 27.8">
+          <defs>
+            <mask id="Mask-1">
+              <path
+                id="Red_Mask"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                stroke-width="0"
+                d="M-56.1428,-1.8L-26.0182,-1.8L-26.0182,26L-56.1428,26Z"
+                transform="translate(67.4629,12.1) scale(1.02761,1) translate(-11.3516,-12.1)"/>
+            </mask>
+          </defs>
+          <style>
+            #Wilkinson_Logo:hover #Global_Group {
+              transform-origin: center;
+              transform: scale(0.9);
+              transition-duration: 0.15s;
+              transition-timing-function: ease-in-out;
+            }
+
+            #Wilkinson_Logo:hover #Red {
+              animation: 0.2s linear forwards Red_in;
+            }
+
+            #Wilkinson_Logo:hover #Blue {
+              animation: 0.2s linear forwards Blue_in;
+            }
+
+            #Wilkinson_Logo:hover #Blue_Centre_Corners {
+              animation: 0.2s linear forwards Blue_Centre_Corners_in;
+            }
+
+            #Red {
+              animation: 0.2s linear forwards Red_out;
+            }
+
+            #Blue {
+              animation: 0.2s linear forwards Blue_out;
+            }
+
+            #Blue_Centre_Corners {
+              animation: 0.2s linear forwards Blue_Centre_Corners_out;
+            }
+
+            @keyframes Red_in {
+              0% {
+                transform: translate(-1.895209px,-1.8px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(13.404791px,-1.8px);
+              }
+            }
+
+            @keyframes Blue_in {
+              0% {
+                transform: translate(0px,0px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(-15.477324px,0px);
+              }
+            }
+
+            @keyframes Blue_Centre_Corners_in {
+              0% {
+                stroke-dashoffset: 0;
+                stroke-opacity: 1;
+              }
+              33.3333% {
+                stroke-dashoffset: 5px;
+                stroke-opacity: 0;
+              }
+              100% {
+                stroke-dashoffset: 5px;
+                stroke-opacity: 0;
+              }
+            }
+
+            @keyframes Red_out {
+              0% {
+                transform: translate(13.404791px,-1.8px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(-1.895209px,-1.8px);
+              }
+            }
+
+            @keyframes Blue_out {
+              0% {
+                transform: translate(-15.477324px,0px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(0px,0px);
+              }
+            }
+
+            @keyframes Blue_Centre_Corners_out {
+              0% {
+                stroke-dashoffset: 5;
+                stroke-opacity: 0;
+              }
+              33.3333% {
+                stroke-dashoffset: 5px;
+                stroke-opacity: 0;
+              }
+              100% {
+                stroke-dashoffset: px;
+                stroke-opacity: 1;
+              }
+            }
+          </style>
+          <rect
+            width="100%"
+            height="100%"
+            fill="fff"
+            opacity="0"/>
+          <g id="Global_Group">
+            <g id="Red_Group" mask="url(#Mask-1)" transform="translate(16.3726,13.9) translate(-14.4774,-12.1)">
+              <path
+                id="Red"
+                class="st0"
+                d="M15.5,26L30.8,26L30.85,1.8L4.4,1.8C2.5,1.8,1.3,3.9,2.2,5.5L13.3,24.7C13.8,25.6,14.6,26,15.5,26Z"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke="#000000"
+                stroke-width="3.5"
+                stroke-linejoin="round"
+                fill="#B92B29"
+                transform="translate(14.4524,12.1) translate(-16.3476,-13.9)"/>
+            </g>
+            <path
+              id="Green"
+              class="st1"
+              d="M33,24.8L44.1,5.5C45.1,3.8,43.9,1.8,41.9,1.8L19.7,1.8C17.8,1.8,16.6,3.9,17.5,5.5L28.6,24.8C29.6,26.4,32,26.4,33,24.8Z"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="#32B34A"
+              transform="translate(30.8273,13.9) translate(-30.8273,-13.9)"/>
+            <path
+              id="Blue"
+              class="st2"
+              d="M48.5,24.8L59.6,5.5C60.6,3.8,59.4,1.8,57.4,1.8L35.2,1.8C33.3,1.8,32.1,3.9,33,5.5L44.1,24.8C45.1,26.4,47.5,26.4,48.5,24.8Z"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="#345FAB"
+              transform="translate(46.3273,13.9) translate(-46.3273,-13.9)"/>
+            <path
+              id="Static_Centreline"
+              class="st3"
+              d="M33,24.8L44.1,5.5C45.1,3.8,43.9,1.8,41.9,1.8L19.7,1.8C17.8,1.8,16.6,3.9,17.5,5.5L28.6,24.8C29.6,26.4,32,26.4,33,24.8Z"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="none"
+              transform="translate(30.8273,13.9) translate(-30.8273,-13.9)"/>
+            <path
+              id="Blue_Centre_Corners"
+              class="st3"
+              d="M40.7,11.4C39.8,13.1,37.4,13.1,36.4,11.4"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="none"
+              stroke-dasharray="5"
+              stroke-dashoffset="0"
+              stroke-linecap="round"
+              opacity="1"
+              stroke-opacity="1"
+              transform="translate(40.4297,7.2375) translate(-40.4297,-7.2375)"/>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <ul class="nav-list">
       <li>
-        <a href="{{ site.baseurl }}{{ sections.url }}">{{ sections.title }}</a>
+        <a class="nav-list-item-link" href="https://wilkinson.graphics/projects">Projects</a>
       </li>
-      {% endif %}
-      {% endfor %}
-      <li class="nav-category">Case Studies</li>
-      {% for casestudies in site.casestudies %}
-      {% if page.url == casestudies.url %}
-      <li class="nav-list-selected">
-        <div class="nav-link-indicator"></div>
-        <a class="nav-casestudy-link nav-link-selected" href="{{ site.baseurl }}{{ casestudies.url }}">↳{{ casestudies.title }}</a>
-      </li>
-      {% endif %}
-      {% if page.url != casestudies.url %}
       <li>
-        <a href="{{ site.baseurl }}{{ casestudies.url }}">↳{{ casestudies.title }}</a>
+        <a class="nav-list-item-link" href="https://wilkinson.graphics/about">About</a>
       </li>
-      {% endif %}
-      {% endfor %}
-    </ol>
+    </ul>
+    <div class="nav-iconbox">
+      <a class="nav-iconbox-link" href="https://github.com/Shrinks99" title="GitHub">
+        <i class='bx bxl-github'></i>
+      </a>
+      <a class="nav-iconbox-link" href="https://linkedin.com/in/henry-wilkinson" title="LinkedIn">
+        <i class='bx bxl-linkedin-square' style="color:#2867b2;"></i>
+      </a>
+      <a class="nav-iconbox-link" href="https://instagram.com/hank__w/" title="Instagram">
+        <i class='bx bxl-instagram' style="background: linear-gradient(45deg, #f7c72c 0%, #f61402 50%, #bd00a7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+      </a>
+      <a class="nav-iconbox-link" href="https://twitter.com/Shrinks99" title="Twitter">
+        <i class='bx bxl-twitter' style="color:#1DA1F2;"></i>
+      </a>
+    </div>
+  </nav>
   </div>
-</nav>

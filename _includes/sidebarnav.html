@@ -1,0 +1,36 @@
+<nav class="sidebarnav">
+  <div style="position:fixed;">
+    <a href="{{ base }}" class="sidebarnav-title">
+      <h1>Designing <br />Node-Based <br />Interfaces</h1>
+    </a>
+    <ol>
+      {% for sections in site.sections %}
+      {% if page.url == sections.url %}
+      <li class="sidebarnav-list-selected">
+        <div class="sidebarnav-link-indicator"></div>
+        <a class="sidebarnav-link-selected" href="{{ site.baseurl }}{{ sections.url }}">{{ sections.title }}</a>
+      </li>
+      {% endif %}
+      {% if page.url != sections.url %}
+      <li>
+        <a href="{{ site.baseurl }}{{ sections.url }}">{{ sections.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      <li class="sidebarnav-category">Case Studies</li>
+      {% for casestudies in site.casestudies %}
+      {% if page.url == casestudies.url %}
+      <li class="sidebarnav-list-selected">
+        <div class="sidebarnav-link-indicator"></div>
+        <a class="sidebarnav-casestudy-link sidebarnav-link-selected" href="{{ site.baseurl }}{{ casestudies.url }}">↳{{ casestudies.title }}</a>
+      </li>
+      {% endif %}
+      {% if page.url != casestudies.url %}
+      <li>
+        <a href="{{ site.baseurl }}{{ casestudies.url }}">↳{{ casestudies.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ol>
+  </div>
+</nav>
