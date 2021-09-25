@@ -12,6 +12,8 @@ Nodes bring a lot of advantages to the table, however, throughout my research I 
 
 Whereas the aforementioned interaction guidelines seek to instruct developers on how to create applications that have great user experiences on their respective platform, this guide aims to provide a reference to those who want to have a better understanding of nodes and how to implement them effectively.  The guidelines I will set out in this document are not intended as a hard ruleset, rather they are to be expanded upon as software evolves, ideally the guide will evolve with it!
 
-I hope you find this document helpful, please write to me if you do!  I'd love to hear your thoughts, my contact information can be found on my [about page](https://wilkinson.graphics/about).
+I hope you find this document helpful, please write to me if you do!  I'd love to hear your thoughts! :)
+
+My contact information can be found on my [about page](https://wilkinson.graphics/about).
 
 -Henry
