@@ -76,6 +76,14 @@ $mq-breakpoints: (
   margin-top: 4.6rem;
   display: grid;
   grid-template-columns: 0.4fr 1.6fr;
+  grid-column-gap: 1.2rem;
+}
+
+@include mq($from: mobile, $until: tablet) {
+  .main-section-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 // Typography

@@ -1,5 +1,5 @@
 .sidebarnav-title {
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
   color: black;
   text-decoration: none;
 
@@ -12,10 +12,26 @@
   color: $hwblue;
 }
 
-.sidebarnav {
+.sidebarnav-container {
+  position: fixed;
+  width: 12rem;
+}
 
-  width: fit-content;
-  height: fit-content;
+@include mq($from: mobile, $until: tablet) {
+  .sidebarnav-container {
+    position: relative;
+    width: 100%;
+    border-radius: $borderradius;
+  }
+
+  // remove to place sidebar back on top on mobile
+  .sidebarnav {
+    grid-row-start: 2;
+    margin-bottom: 4rem;
+  }
+}
+
+.sidebarnav {
 
   ol {
     padding-left: 0;
