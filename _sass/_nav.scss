@@ -16,11 +16,19 @@
   justify-content: space-between;
   background: inherit;
   background-color: rgba(212, 216, 217, 1);
-  backdrop-filter: blur(0.5rem);
   padding: 1rem;
   margin-top: 0.5rem;
   border-radius: $borderradius;
   box-shadow: $elementshadow;
+}
+
+/* if backdrop support:*/
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .nav-container {
+    background-color: rgba(212, 216, 217, 0.8);
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
+  }
 }
 
 .nav-logobox {
