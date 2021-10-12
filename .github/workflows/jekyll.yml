@@ -1,20 +1,25 @@
-name: Jekyll site CI
+# name: Jekyll site CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Build the site in the jekyll/builder container
+#       run: |
+#         docker run \
+#         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+#         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+name: Jekyll 4 Build & Deploy
+  # You may pin to the exact commit or the version.
+  # uses: joshlarsen/jekyll4-deploy-gh-pages@ff7f234945e2c9556b9a300406ffe4d6d08291cb
+  uses: joshlarsen/jekyll4-deploy-gh-pages@v1.8
