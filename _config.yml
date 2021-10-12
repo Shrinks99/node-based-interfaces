@@ -23,6 +23,12 @@ collections:
     # permalink: /case-studies
   sections:
     output: true
+    order:
+      - home.md
+      - foreword.md
+      - intro-to-nodes.md
+      - making-good-nodes.md
+      - when-to-use-nodes.md
     # permalink: /sections
 plugins:
   - jekyll-feed
