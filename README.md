@@ -15,8 +15,8 @@ This website uses Jekyll, get that [here](https://jekyllrb.com/).
 Navigate to http://127.0.0.1:4000/node-based-interfaces/ in the browser and get going!
 
 ## Contributors
-- @Shrinks99 — Primary content
-- @jc-sanchez16 — Mobile nav menu JavaScript
+- [@Shrinks99](https://wilkinson.graphics/) — Primary content
+- [@jc-sanchez16](https://github.com/jc-sanchez16) — Mobile nav menu JavaScript
 
 ## License & Credits
 
