@@ -25,12 +25,14 @@
 
 @include mq($from: mobile, $until: tablet) {
 
-  .sidebarnav-title-container:hover {
-    background-color: $hwblue;
-    border-radius: $borderradius;
-    transform: scale(1.02) translate(0, -2px);
-    box-shadow: $elementshadow;
-    transition: .1s ease-in-out;
+  @media (hover: hover) {
+    .sidebarnav-title-container:hover {
+      background-color: $hwblue;
+      border-radius: $borderradius;
+      transform: scale(1.02) translate(0, -2px);
+      box-shadow: $elementshadow;
+      transition: .1s ease-in-out;
+    }
   }
 
   .sidebar-collapsible:after {
