@@ -1,21 +1,64 @@
 .sidebarnav-title-container {
-
-  color: black;
-
+  border-style: none;
+  background-color: inherit;
+  text-align: left;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 
   .sidebarnav-title {
+    // position: static;
+    // z-index: -2;
     margin-top: 0;
     font-size: 1.8rem;
     text-decoration: none;
+    color: black;
   }
 }
 
 .sidebarnav-container {
   position: fixed;
   width: 12rem;
+  transition: .1s ease-in-out;
 }
 
 @include mq($from: mobile, $until: tablet) {
+
+  .sidebarnav-title-container:hover {
+    background-color: $hwblue;
+    border-radius: $borderradius;
+    transform: scale(1.02);
+    box-shadow: $elementshadow;
+    transition: .1s ease-in-out;
+  }
+
+  .sidebar-collapsible:after {
+    content: "\2193"; /* Unicode character for "plus" sign (+) */
+    font-size: 1rem;
+    float: right;
+    position: relative;
+    padding-right: 0.5rem;
+    // top: 0.2rem;
+    color: $hwlightgrey !important;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .sidebar-collapsible-active:after {
+    content: "–"; /* Unicode character for "minus" sign (-) */
+  }
+
+  .sidebarnav-title-container {
+    cursor: pointer;
+  }
+
+  .sidebar-content {
+    overflow: hidden;
+    display: none;
+  }
+
   .sidebarnav-container {
     position: relative;
     width: 100%;
@@ -29,10 +72,10 @@
     background-color: $hwgrey;
     border-radius: $borderradius;
     box-shadow: $elementshadow;
-    padding: 1rem;
+    padding: 0;
 
-    h1 {
-      color: white;
+    .sidebarnav-title {
+      color: white !important;
       font-size: 1.2rem !important;
     }
 
@@ -48,6 +91,10 @@
       color: darken($hwlightgrey, 20) !important;
     }
 
+    .sidebarnav-link-selected {
+      color: white !important;
+    }
+
     a:hover {
       color: darken($hwlightgrey, 35) !important;
     }
@@ -56,7 +103,7 @@
 
 .sidebarnav {
   ol {
-    padding-left: 0;
+    padding-left: 1rem;
     list-style: none;
   }
 

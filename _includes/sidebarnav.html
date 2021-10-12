@@ -1,9 +1,9 @@
 <nav class="sidebarnav">
   <div class="sidebarnav-container">
-    <div class="sidebarnav-title-container">
+    <button type="button" class="sidebarnav-title-container sidebar-collapsible">
       <h1 class="sidebarnav-title">Designing Node-Based Interfaces</h1>
-    </div>
-    <ol>
+    </button>
+    <ol class="sidebar-content">
       {% for sections in site.sections %}
       {% if page.url == sections.url %}
       <li class="sidebarnav-list-selected">
@@ -33,4 +33,44 @@
       {% endfor %}
     </ol>
   </div>
+  <div class="nav-iconbox">
+    
+  </div>
 </nav>
+
+<script>
+  var small = false;
+  //select the element from the DOM
+  var coll = document.getElementsByClassName("sidebar-collapsible")[0];
+  //create an event listener on the click action
+  coll.addEventListener("click", function() {
+    console.log("call click");
+    //altern on each click this class on the DOM element
+    this.classList.toggle("sidebar-collapsible-active");
+    //Get the next http element
+    var content = this.nextElementSibling;
+    //Calc the visual width of the viewport
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    if (vw > 740) {
+      content.style.display = "block";
+    } else {
+      //change it to a ternary operator
+      content.style.display = content.style.display === "block" ? "none" : "block"
+    }
+  });
+  window.addEventListener('resize', function(event) {
+    var coll = document.getElementsByClassName("sidebar-collapsible")[0];
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    //Get the next http element
+    var content = coll.nextElementSibling;
+    if (vw < 740 && !small) {
+      small = true
+      //altern on each click this class on the DOM element
+      coll.classList.add("sidebar-collapsible-active");
+      //change it to a ternary operator
+      content.style.display = content.style.display === "block" ? "none" : "block"
+    } else if (vw >= 740 && small) {
+      content.style.display = "block";
+    }
+  })
+</script>
