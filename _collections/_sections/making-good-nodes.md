@@ -26,7 +26,9 @@ Don't let interacting with the node graph be the bottleneck of operations per mi
 
 ### Sockets VS Pre-Extended Pipes
 
-Some node-based programs use sockets to determine, others simply point their pipes into the node and display unconnected inputs as pipes instead of as sockets.  If your program uses multi-in, multi-out nodes you will likely be connecting pipes to different operators, this requires a socketed system to ensure that users are able to visually determine where the data they want to connect will go.
+![A node with two pipe arrows protruding from the top and a node with 3 socketed inputs and one output socket.  Both nodes are not connected to others.](../img/sockets-vs-extended.svg)
+
+Some node-based programs use sockets to define input connections, others extend existing pipes from the node to display unconnected inputs instead.  If your program uses multi-in, multi-out nodes you will likely be connecting pipes to different operators.  In most cases, this requires a socketed system to ensure that users are able to visually determine where the data they want to connect will go.
 
 If your program uses multi-in, single-out nodes that pass along all data through the pipe it may be advantageous to avoid sockets all-together.  Sockets are typically quite small and have less clickable area than pre-extended pipes, pre-extended pipes with labels can make the experience of connecting nodes together quicker due to their larger clickable area.
 
