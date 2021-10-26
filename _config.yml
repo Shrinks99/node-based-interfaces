@@ -29,6 +29,7 @@ collections:
       - intro-to-nodes.md
       - making-good-nodes.md
       - when-to-use-nodes.md
+      - additional-considerations.md
     # permalink: /sections
 plugins:
   - jekyll-feed
