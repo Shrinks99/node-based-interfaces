@@ -10,3 +10,5 @@ gem "jekyll", "~> 4.2.1"
 gem "jekyll-feed"
 gem "jekyll-redirect-from"
 # gem "github-pages"
+
+gem "webrick", "~> 1.7"
