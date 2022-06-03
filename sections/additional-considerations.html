@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <!-- Makes URLs truly relative to their root directory. This is used instead of Jekyll's default 'baseurl' feature because it is more robust. Add more rules here if you need to!-->
+
+
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f0f0f0">
+  <meta name="author" content="Henry Wilkinson">
+  <meta name="description" content="Designing Node-Based Interfaces">
+  <meta name="keywords" content="Nodes, Node-based, Computer Interfaces, Node-graph, Guide, UI/UX, Design">
+  <title>Additional Considerations</title>
+  <!-- OpenGraph Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Additional Considerations">
+  <meta property="og:image" content="https://wilkinson.graphics/node-based-interfaces/img/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Designing Node-Based Interfaces">
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@Shrinks99" />
+  <meta name="twitter:domain" content="wilkinson.graphics">
+  <meta name="twitter:title" content="Additional Considerations">
+  <meta name="twitter:description" content="Designing Node-Based Interfaces">
+  <meta name="twitter:image" content="https://wilkinson.graphics/node-based-interfaces/img/social-preview.jpg">
+  <meta name="twitter:image:alt" content="Examples of nodes, styled to look like a construction blueprint" />
+  <!-- Stylesheets & Fonts -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <nav class="nav" aria-label="main">
+  <div class="nav-container">
+    <div class="nav-logobox">
+      <a title="Home" class="nav-logo-link" href="https://wilkinson.graphics/">
+        <!-- <object type="image/svg+xml" data="/node-based-interfaces/img/menubar-logo-anim.svg" class="nav-logo"></object> -->
+        <svg xmlns="http://www.w3.org/2000/svg" id="Wilkinson_Logo" class="nav-logo" viewBox="0 0 61.7 27.8">
+          <defs>
+            <mask id="Mask-1">
+              <path
+                id="Red_Mask"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                stroke-width="0"
+                d="M-56.1428,-1.8L-26.0182,-1.8L-26.0182,26L-56.1428,26Z"
+                transform="translate(67.4629,12.1) scale(1.02761,1) translate(-11.3516,-12.1)"/>
+            </mask>
+          </defs>
+          <style>
+            #Wilkinson_Logo:hover #Global_Group {
+              transform-origin: center;
+              transform: scale(0.9);
+              transition-duration: 0.15s;
+              transition-timing-function: ease-in-out;
+            }
+
+            #Wilkinson_Logo:hover #Red {
+              animation: 0.2s linear forwards Red_in;
+            }
+
+            #Wilkinson_Logo:hover #Blue {
+              animation: 0.2s linear forwards Blue_in;
+            }
+
+            #Wilkinson_Logo:hover #Blue_Centre_Corners {
+              animation: 0.2s linear forwards Blue_Centre_Corners_in;
+            }
+
+            #Red {
+              animation: 0.2s linear forwards Red_out;
+            }
+
+            #Blue {
+              animation: 0.2s linear forwards Blue_out;
+            }
+
+            #Blue_Centre_Corners {
+              animation: 0.2s linear forwards Blue_Centre_Corners_out;
+            }
+
+            @keyframes Red_in {
+              0% {
+                transform: translate(-1.895209px,-1.8px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(13.404791px,-1.8px);
+              }
+            }
+
+            @keyframes Blue_in {
+              0% {
+                transform: translate(0px,0px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(-15.477324px,0px);
+              }
+            }
+
+            @keyframes Blue_Centre_Corners_in {
+              0% {
+                stroke-dashoffset: 0;
+                stroke-opacity: 1;
+              }
+              33.3333% {
+                stroke-dashoffset: 5px;
+                stroke-opacity: 0;
+              }
+              100% {
+                stroke-dashoffset: 5px;
+                stroke-opacity: 0;
+              }
+            }
+
+            @keyframes Red_out {
+              0% {
+                transform: translate(13.404791px,-1.8px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(-1.895209px,-1.8px);
+              }
+            }
+
+            @keyframes Blue_out {
+              0% {
+                transform: translate(-15.477324px,0px);
+                animation-timing-function: ease-in-out;
+              }
+              100% {
+                transform: translate(0px,0px);
+              }
+            }
+
+            @keyframes Blue_Centre_Corners_out {
+              0% {
+                stroke-dashoffset: 5;
+                stroke-opacity: 0;
+              }
+              33.3333% {
+                stroke-dashoffset: 5px;
+                stroke-opacity: 0;
+              }
+              100% {
+                stroke-dashoffset: px;
+                stroke-opacity: 1;
+              }
+            }
+          </style>
+          <rect
+            width="100%"
+            height="100%"
+            fill="fff"
+            opacity="0"/>
+          <g id="Global_Group">
+            <g id="Red_Group" mask="url(#Mask-1)" transform="translate(16.3726,13.9) translate(-14.4774,-12.1)">
+              <path
+                id="Red"
+                class="st0"
+                d="M15.5,26L30.8,26L30.85,1.8L4.4,1.8C2.5,1.8,1.3,3.9,2.2,5.5L13.3,24.7C13.8,25.6,14.6,26,15.5,26Z"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke="#000000"
+                stroke-width="3.5"
+                stroke-linejoin="round"
+                fill="#B92B29"
+                transform="translate(14.4524,12.1) translate(-16.3476,-13.9)"/>
+            </g>
+            <path
+              id="Green"
+              class="st1"
+              d="M33,24.8L44.1,5.5C45.1,3.8,43.9,1.8,41.9,1.8L19.7,1.8C17.8,1.8,16.6,3.9,17.5,5.5L28.6,24.8C29.6,26.4,32,26.4,33,24.8Z"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="#32B34A"
+              transform="translate(30.8273,13.9) translate(-30.8273,-13.9)"/>
+            <path
+              id="Blue"
+              class="st2"
+              d="M48.5,24.8L59.6,5.5C60.6,3.8,59.4,1.8,57.4,1.8L35.2,1.8C33.3,1.8,32.1,3.9,33,5.5L44.1,24.8C45.1,26.4,47.5,26.4,48.5,24.8Z"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="#345FAB"
+              transform="translate(46.3273,13.9) translate(-46.3273,-13.9)"/>
+            <path
+              id="Static_Centreline"
+              class="st3"
+              d="M33,24.8L44.1,5.5C45.1,3.8,43.9,1.8,41.9,1.8L19.7,1.8C17.8,1.8,16.6,3.9,17.5,5.5L28.6,24.8C29.6,26.4,32,26.4,33,24.8Z"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="none"
+              transform="translate(30.8273,13.9) translate(-30.8273,-13.9)"/>
+            <path
+              id="Blue_Centre_Corners"
+              class="st3"
+              d="M40.7,11.4C39.8,13.1,37.4,13.1,36.4,11.4"
+              stroke-width="3.5"
+              stroke="#000000"
+              stroke-miterlimit="10"
+              fill="none"
+              stroke-dasharray="5"
+              stroke-dashoffset="0"
+              stroke-linecap="round"
+              opacity="1"
+              stroke-opacity="1"
+              transform="translate(40.4297,7.2375) translate(-40.4297,-7.2375)"/>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a class="nav-list-item-link" href="https://wilkinson.graphics/projects">Projects</a>
+      </li>
+      <li>
+        <a class="nav-list-item-link" href="https://wilkinson.graphics/about">About</a>
+      </li>
+    </ul>
+    <div class="nav-iconbox">
+      <a class="nav-iconbox-link" href="https://github.com/Shrinks99" title="GitHub">
+        <i class='bx bxl-github'></i>
+      </a>
+      <a class="nav-iconbox-link" href="https://linkedin.com/in/henry-wilkinson" title="LinkedIn">
+        <i class='bx bxl-linkedin-square' style="color:#2867b2;"></i>
+      </a>
+      <a class="nav-iconbox-link" href="https://instagram.com/hank__w/" title="Instagram">
+        <i class='bx bxl-instagram' style="background: linear-gradient(45deg, #f7c72c 0%, #f61402 50%, #bd00a7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+      </a>
+      <a class="nav-iconbox-link" href="https://twitter.com/Shrinks99" title="Twitter">
+        <i class='bx bxl-twitter' style="color:#1DA1F2;"></i>
+      </a>
+    </div>
+  </nav>
+  </div>
+    <div class="wrapper">
+      <div class="stdsection">
+        <div class="section-container main-section-grid">
+            <nav class="sidebarnav">
+  <div class="sidebarnav-container">
+    <button type="button" class="sidebarnav-title-container sidebar-collapsible">
+      <h1 class="sidebarnav-title">Designing Node-Based Interfaces</h1>
+    </button>
+    <ol class="sidebar-content">
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/sections/home.html">Home</a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/sections/foreword.html">Foreword</a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/sections/intro-to-nodes.html">Intro to Nodes</a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/sections/making-good-nodes.html">Making Good Nodes</a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/sections/when-to-use-nodes.html">When To Use Nodes</a>
+      </li>
+      
+      
+      
+      <li class="sidebarnav-list-selected">
+        <div class="sidebarnav-link-indicator"></div>
+        <a class="sidebarnav-link-selected" href="/node-based-interfaces/sections/additional-considerations.html">Additional Considerations</a>
+      </li>
+      
+      
+      
+      <li class="sidebarnav-category">Case Studies</li>
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/casestudies/blender.html">↳Nodes in Blender</a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/casestudies/maya.html">↳Nodes in Maya</a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/casestudies/nodebox.html">↳Nodes in Nodebox</a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <a href="/node-based-interfaces/casestudies/nuke.html">↳Nodes in Nuke</a>
+      </li>
+      
+      
+      <div class="sidebarnav-iconbox">
+        <a class="sidebarnav-iconbox-link" href="https://github.com/Shrinks99/node-based-interfaces/" title="Contribute on GitHub">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a class="sidebarnav-iconbox-link" href="https://creativecommons.org/licenses/by/4.0/" title="License Details">
+          <i class='bx bxl-creative-commons'></i>
+        </a>
+      </div>
+    </ol>
+  </div>
+</nav>
+
+<script>
+  var small = false;
+  //select the element from the DOM
+  var coll = document.getElementsByClassName("sidebar-collapsible")[0];
+  //create an event listener on the click action
+  coll.addEventListener("click", function() {
+    console.log("call click");
+    //altern on each click this class on the DOM element
+    this.classList.toggle("sidebar-collapsible-active");
+    //Get the next http element
+    var content = this.nextElementSibling;
+    //Calc the visual width of the viewport
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    if (vw > 740) {
+      content.style.display = "block";
+    } else {
+      //change it to a ternary operator
+      content.style.display = content.style.display === "block" ? "none" : "block"
+    }
+  });
+  window.addEventListener('resize', function(event) {
+    var coll = document.getElementsByClassName("sidebar-collapsible")[0];
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    //Get the next http element
+    var content = coll.nextElementSibling;
+    if (vw < 740 && !small) {
+      small = true
+      //altern on each click this class on the DOM element
+      coll.classList.add("sidebar-collapsible-active");
+      //change it to a ternary operator
+      content.style.display = content.style.display === "block" ? "none" : "block"
+    } else if (vw >= 740 && small) {
+      content.style.display = "block";
+    }
+  })
+</script>
+          <div class="body-container">
+            <section class="bodycontent">
+              <h2 id="additional-considerations">Additional Considerations</h2>
+
+<h3 id="node-graph-interaction">Node-Graph Interaction</h3>
+
+<p>Chances are if you’re making a piece of node-based software your users will be adding, connecting, and removing nodes from the graph <em>a lot</em>.  Most node-based software implements a text-based search system where advanced users can hit a hotkey and start typing to search for the node or function they want to add or complete.  This is <em>great</em> and allows users to rapidly add nodes to the graph.  New users may prefer to look through an organized menu of nodes based on their category, this is also valuable as command based search systems aren’t always ideal for discovery—consider implementing both options.</p>
+
+<p>How fast can I create, connect disconnect, and delete nodes from my application’s graph?  Is it difficult to connect pipes?  Can these processes be made easier and faster?  Can I easily add and remove nodes from the middle of the graph?  All of these are good questions to ask yourself when designing and programming your node-graph and will pay dividends when other users are interacting with it.</p>
+
+<p>Don’t let interacting with the node graph be the bottleneck of operations per minute that an advanced user can achieve within your software!</p>
+
+<h3 id="store-graph-data-as-plaintext">Store graph data as plaintext!</h3>
+
+<p>Node-graphs allow users to create complex effects that can be applied to any input, it’s especially useful to be able to share them effectively!  Blender has a large community of artists online however as of 2.92 whenever somebody creates something with nodes in the program they often share it with people <em>by posting an image of the node graph.</em>  Blender users cannot copy and paste the graph data outside of the program or even between separate files.  Conversely, other node based applications (Nuke, Natron, Olive) <em>do</em> store their graph data as plaintext, this has two key advantages for users.</p>
+
+<ol>
+  <li>
+    <p>Sharing project data! <br /> <br /> Plaintext data storage means that node-graph data can easily be copied and shared outside of the application, no need to save a new project file and import it every time you want to copy one node from another project (of course this should still be a way to import graphs). With plain text data storage users can easily share their projects — or parts of them — to the web or with other colleagues.  Moving data around inside your application is great, moving it around outside of your application with plaintext means that is easier for users to build their own tools and use your application as a platform instead of creating all graphs on a per-project-file basis.</p>
+  </li>
+  <li>
+    <p>Debugging! <br /> <br /> People aren’t perfect, software isn’t perfect, bugs are going to happen!  Saving project files as plaintext allows users to open the project in a text editor and begin the process of sorting out what node is breaking their project file.  Coupled with good logs this process shouldn’t be terribly difficult for people to do!  Some node-based software has its own syntax for defining text-based file structure, others just use XML.  Whatever your application ends up using it shouldn’t be terribly difficult to create a syntax that is relatively quick to parse as all node-graphs are just made up of smaller component parts and act with a hierarchy.</p>
+  </li>
+</ol>
+
+<h3 id="consider-graph-organization">Consider graph organization</h3>
+
+<p>Is a node-graph the primary way that users create content within your application?  If so users may need to maintain a mental model of what they have created and organize it in a way that makes sense to them.  Auto-layout systems may not work well for users if they are developing complex graphs that require hundreds of nodes to achieve desired effects.</p>
+
+<p>Does your node-graph exist primarily to show data flow of content made with other parts of your interface and <em>isn’t</em> the primary way of interacting with your application?  You may be able to rely more heavily on an automatically laid-out graph, especially if interacting with the graph isn’t the only way to manipulate data within your application.  If the node-graph is a secondary part of your application it may actually be advantageous to lay it out automatically, as taking the manual approach may lead to lower operations executed per second by the user.  If the scope of nodes in your application is limited and your users aren’t going to be laying out hundreds or even tens of nodes, an auto-layout system can also make sense to speed up workflows.</p>
+
+<p>Node graphs aren’t bound by the same restrictions that other UI components have.  Because of the seemingly infinite workspace and ability to zoom the graph that users are typically afforded with other UI elements, hiding sections of the graph that are created by users as part of their process isn’t really positive in most cases.  Graph components like node backdrops may be a helpful way of visually grouping nodes to serve the same function as a group would in a layer-based system.  Actual group nodes usually act as individual contained tools so users aren’t required to constantly hide the main graph and jump in and out of them to do their work.</p>
+
+<h3 id="general-best-practices">General best practices</h3>
+
+<ol>
+  <li>
+    <p>Expose low-level access to data transformation abilities to the user! <br /> <br /> This is an asset, it allows users to build complex effects!  When manipulating data with destructive workflows these low level abilities can be painful to use because of the amount of time they take to execute in order to achieve desired effects.  Because nodes can be constructed into more complex groups and copied separate from their inputs as mentioned previously, users can build out their own toolsets (or use community created and pre-packaged grouped effects) and create amazing things with your software.</p>
+  </li>
+  <li>
+    <p>Remember trackpad users!  <br /> <br />  Lots of node-based software works really well with a mouse and relies on middle-mouse to move the graph around, middle mouse doesn’t exist on trackpads!  Your application may be aimed at people that will be mostly working on desktops with mice or trackballs but it <em>will</em> be used by somebody with a laptop at some point.  This advice is absolutely not limited to node-based software but it IS a personal gripe of mine.</p>
+  </li>
+</ol>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
